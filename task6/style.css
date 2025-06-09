@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  max-width: 400px;
+  margin: 50px auto;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  transition: border 0.3s;
+  font-size: 16px;
+}
+input:focus, textarea:focus {
+  border-bottom-color: #007bff;
+  outline: none;
+}
+label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: brown;
+  transition: 0.2s;
+  pointer-events: none;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 12px;
+  color: #007bff;
+}
+.error {
+  color: red;
+  font-size: 13px;
+}
+.success {
+  color: green;
+  margin-top: 10px;
+}
+small {
+  display: block;
+  text-align: right;
+  margin-top: -15px;
+}

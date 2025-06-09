@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unique Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Contact Us</h2>
+  <form id="contactForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <input type="text" id="name" placeholder=" " required />
+      <label for="name">Name</label>
+      <div class="error" id="nameError"></div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="email" placeholder=" " required />
+      <label for="email">Email</label>
+      <div class="error" id="emailError"></div>
+    </div>
+
+    <div class="form-group">
+      <textarea id="message" rows="4" placeholder=" " oninput="countChars()" maxlength="300" required></textarea>
+      <label for="message">Message</label>
+      <small><span id="charCount">0</span>/300</small>
+      <div class="error" id="messageError"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+    <div class="success" id="successMessage"></div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
